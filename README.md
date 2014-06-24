@@ -28,4 +28,4 @@ C# Projects in this Repository
 * BloenkExampleVuMeter: Short example about how to use Blönk to visualize music
 * BloenkForLync: Integration of Blönk in the Microsoft Lync client (status display and call/message notifier)
 * BloenkPresentation: A application I used to demonstrate Blönk
-* BloenkTest: Application demonstrating many features of Blönk.
+* BloenkTest: Application demonstrating many features of Blönk
