@@ -1,0 +1,54 @@
+﻿<Controls:MetroWindow
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+		xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+		xmlns:Behaviours="clr-namespace:MahApps.Metro.Behaviours;assembly=MahApps.Metro"
+        x:Class="BloenkForLync.MainWindow"
+        Title="Blönk for Lync" 
+        Height="106.584" Width="422.069" 
+        Loaded="MetroWindow_Loaded" 
+        Icon="Resources/Icons/icon30.png" 
+        Closing="MetroWindow_Closing" 
+        ResizeMode="CanMinimize" 
+        StateChanged="MetroWindow_StateChanged"
+		AllowsTransparency="False"
+        SaveWindowPosition="True">
+    <i:Interaction.Behaviors>
+        <Behaviours:BorderlessWindowBehavior AllowsTransparency="False"
+                                             EnableDWMDropShadow="True" />
+        <Behaviours:WindowsSettingBehaviour/>
+    </i:Interaction.Behaviors>
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/Blue.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml" />
+                <ResourceDictionary Source="/Resources/Icons.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Controls:MetroWindow.WindowCommands>
+        <Controls:WindowCommands>
+            <Button x:Name="btnSettings" Content="settings" Click="btnSettings_Click" />
+            <Button x:Name="btnAbout" Content="about" Click="btnAbout_Click" />
+        </Controls:WindowCommands>
+    </Controls:MetroWindow.WindowCommands>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="41*"/>
+            <ColumnDefinition Width="63*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Lync Status: " HorizontalAlignment="Left" Margin="82,10,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblLyncStatus" Content="Unknown" HorizontalAlignment="Left" Margin="162,10,0,0" VerticalAlignment="Top" Width="249" Grid.ColumnSpan="2"/>
+        <Border x:Name="borderState" BorderThickness="0" HorizontalAlignment="Left" Height="58" Margin="10,10,0,0" VerticalAlignment="Top" Width="7" Background="#FFE8E8E8"/>
+        <Border BorderThickness="0" HorizontalAlignment="Left" Height="58" Margin="17,10,0,0" VerticalAlignment="Top" Width="58" Background="#FFECECEC">
+            <Image x:Name="imageAvatar" HorizontalAlignment="Left" Height="58" Margin="0,0,0,0" VerticalAlignment="Top" Width="58"/>
+        </Border>
+        <Label x:Name="lblBloenkConnected" Content="Blönk connected" Grid.Column="1" Margin="0,0,9,6" Padding="0,0,0,0" FontSize="10" Visibility="Visible" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+
+    </Grid>
+</Controls:MetroWindow>

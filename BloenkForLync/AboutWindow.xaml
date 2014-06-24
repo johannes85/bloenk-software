@@ -1,0 +1,36 @@
+﻿<Controls:MetroWindow x:Class="BloenkForLync.AboutWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+		xmlns:Behaviours="clr-namespace:MahApps.Metro.Behaviours;assembly=MahApps.Metro"
+        Title="About Blönk for Lync" Height="269" Width="549" 
+        ResizeMode="NoResize" WindowStartupLocation="CenterOwner" Loaded="MetroWindow_Loaded"
+        AllowsTransparency="False" SaveWindowPosition="True">
+    <i:Interaction.Behaviors>
+        <Behaviours:BorderlessWindowBehavior AllowsTransparency="False"
+                                             EnableDWMDropShadow="True" />
+        <Behaviours:WindowsSettingBehaviour/>
+    </i:Interaction.Behaviors>
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/Blue.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml" />
+                <ResourceDictionary Source="/Resources/Icons.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Label Content="Blönk for Lync" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold"/>
+        <Label Content="by Domestic Hacks" HorizontalAlignment="Left" Margin="10,52,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblWebsite" Content="http://www.domestichacks.info/" HorizontalAlignment="Left" Margin="10,173,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblYouTube" Content="http://youtube.com/DomesticHacks" HorizontalAlignment="Left" Margin="10,195,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblVersion" Content="v0.0" Margin="0,10,10,0" VerticalAlignment="Top" HorizontalAlignment="Right"/>
+        <Label x:Name="lblWebsite_Copy" Content="License:&#xD;&#xA;Creative Commons: Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)" HorizontalAlignment="Left" Margin="10,112,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Controls:MetroWindow>
