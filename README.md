@@ -14,8 +14,8 @@ Hardware
 --
 You can find the full schematic, PCB layouts, firmware and the Windows drivers in a separate repository:  
 https://github.com/johannes85/bloenk-hardware  
-I also published more details about the project on my YouTube channel and website (in German): 
-http://www.domestichacks.info/projekte/bloenk-usb-licht-fuer-lync/
+I also published more details about the project on my YouTube channel and website (in German):  
+http://www.domestichacks.info/projekte/bloenk-usb-licht-fuer-lync/  
 https://www.youtube.com/domestichacks
 
 C# Projects in this Repository
