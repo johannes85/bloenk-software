@@ -33,11 +33,11 @@ namespace Bloenk.Animation
     public class Animation
     {
         protected int ledCount;
+        protected bool stopping;
+        protected BloenkDevice device;
         private List<Step> steps;
         private int currentStep;
-        private BloenkDevice device;
         private Thread thread;
-        private bool stopping;
 
         public Animation(BloenkDevice device, int ledCount)
         {
@@ -56,7 +56,7 @@ namespace Bloenk.Animation
             return (thread != null && thread.IsAlive);
         }
 
-        public void Run()
+        public virtual void Run()
         {
             if (IsRunning() == false && steps.Count > 0)
             {
@@ -79,7 +79,7 @@ namespace Bloenk.Animation
             }
         }
 
-        private void DoWork()
+        protected virtual void DoWork()
         {
             try
             {

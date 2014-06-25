@@ -57,6 +57,7 @@
     <Compile Include="Animation\RandomCircleAnimation.cs" />
     <Compile Include="Animation\CircleAnimation.cs" />
     <Compile Include="Animation\BlinkAnimation.cs" />
+    <Compile Include="Animation\RandomFadeAnimation.cs" />
     <Compile Include="Animation\Step.cs" />
     <Compile Include="BloenkDevice.cs" />
     <Compile Include="BloenkDeviceConfiguration.cs" />

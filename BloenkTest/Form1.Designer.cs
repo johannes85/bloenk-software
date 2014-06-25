@@ -36,6 +36,7 @@
             this.button5 = new System.Windows.Forms.Button();
             this.txtLog = new System.Windows.Forms.TextBox();
             this.pnlMain = new System.Windows.Forms.Panel();
+            this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.numericLed = new System.Windows.Forms.NumericUpDown();
@@ -44,7 +45,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.numericLedCount = new System.Windows.Forms.NumericUpDown();
             this.pnlPicker = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
             this.pnlMain.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericLed)).BeginInit();
@@ -83,7 +84,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(245, 258);
+            this.button4.Location = new System.Drawing.Point(245, 290);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(249, 26);
             this.button4.TabIndex = 10;
@@ -105,7 +106,7 @@
             // 
             this.txtLog.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtLog.Location = new System.Drawing.Point(12, 306);
+            this.txtLog.Location = new System.Drawing.Point(12, 343);
             this.txtLog.Multiline = true;
             this.txtLog.Name = "txtLog";
             this.txtLog.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -114,6 +115,7 @@
             // 
             // pnlMain
             // 
+            this.pnlMain.Controls.Add(this.button8);
             this.pnlMain.Controls.Add(this.button7);
             this.pnlMain.Controls.Add(this.button6);
             this.pnlMain.Controls.Add(this.panel1);
@@ -127,8 +129,18 @@
             this.pnlMain.Controls.Add(this.button3);
             this.pnlMain.Location = new System.Drawing.Point(12, 12);
             this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(495, 289);
+            this.pnlMain.Size = new System.Drawing.Size(495, 323);
             this.pnlMain.TabIndex = 15;
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(245, 194);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(249, 26);
+            this.button7.TabIndex = 23;
+            this.button7.Text = "start random circle animation";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button6
             // 
@@ -227,21 +239,21 @@
             this.pnlPicker.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlPicker_MouseMove);
             this.pnlPicker.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pnlPicker_MouseUp);
             // 
-            // button7
+            // button8
             // 
-            this.button7.Location = new System.Drawing.Point(245, 194);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(249, 26);
-            this.button7.TabIndex = 23;
-            this.button7.Text = "start random circle animation";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.button8.Location = new System.Drawing.Point(245, 258);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(249, 26);
+            this.button8.TabIndex = 24;
+            this.button8.Text = "start random fade animation";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(518, 509);
+            this.ClientSize = new System.Drawing.Size(518, 546);
             this.Controls.Add(this.pnlMain);
             this.Controls.Add(this.txtLog);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -280,6 +292,7 @@
         private System.Windows.Forms.RadioButton rbAllLeds;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
     }
 }
 

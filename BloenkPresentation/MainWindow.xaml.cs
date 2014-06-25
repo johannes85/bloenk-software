@@ -46,7 +46,7 @@ namespace Demo
     /// </summary>
     public partial class MainWindow : Window
     {
-        private static int ledCount = 3;
+        private static int ledCount;
 
         private Dispatcher dispatcher;
         private List<Screen> screens;
@@ -68,6 +68,8 @@ namespace Demo
             {
                 device = new BloenkDevice(5824, 1500);
                 device.OpenDevice();
+                BloenkDeviceConfiguration config = device.ReadConfiguration();
+                ledCount = config.ledCount;
             }
             catch (BloenkDeviceException)
             {

@@ -178,6 +178,17 @@ namespace BloenkTest
             animation.Run();
         }
 
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            if (animation != null && animation.IsRunning())
+            {
+                animation.Stop();
+            }
+            animation = new RandomFadeAnimation(device, (int)numericLedCount.Value, 100);
+            animation.Run();
+        }
+
         private void pnlPicker_MouseDown(object sender, MouseEventArgs e)
         {
             isSelecting = true;
@@ -205,5 +216,6 @@ namespace BloenkTest
                 device.CloseDevice();
             }
         }
+
     }
 }
