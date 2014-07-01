@@ -33,20 +33,29 @@ namespace Bloenk.Animation
     public class RandomCircleAnimation: Animation
     {
         private Color color;
+        private bool onlyFullColors;
+
+        public RandomCircleAnimation(BloenkDevice device, int ledCount, bool onlyFullColors)
+            : base(device, ledCount)
+        {
+            color = Color.White;
+            this.onlyFullColors = onlyFullColors;
+            Init();
+        }
 
         public RandomCircleAnimation(BloenkDevice device, int ledCount)
             : base(device, ledCount)
         {
             color = Color.White;
+            this.onlyFullColors = false;
             Init();
         }
 
         protected override Color LedColorHook(int step, int led, Color color)
         {
-            if (step == 0)
+            if (step == 0 && led == 0)
             {
-                Random random = new Random();
-                this.color = Color.FromArgb(random.Next(256), random.Next(256), random.Next(256));
+                this.color = GetRandomColor();
             }
             if (color == Color.White)
             {
@@ -81,6 +90,34 @@ namespace Bloenk.Animation
                 }
                 AddStep(step);
             }
+        }
+
+        private Color GetRandomColor()
+        {
+            Color color;
+            Random random = new Random();
+
+            if (onlyFullColors)
+            {
+                do {
+                    color = Color.FromArgb(
+                        random.Next(2) == 0 ? 0 : 255,
+                        random.Next(2) == 0 ? 0 : 255,
+                        random.Next(2) == 0 ? 0 : 255
+                    );
+                } while (EqualColor(color, Color.White) || EqualColor(color, Color.Black));
+            }
+            else
+            {
+                color = Color.FromArgb(random.Next(256), random.Next(256), random.Next(256));
+            }
+            
+            return (color);
+        }
+
+        private bool EqualColor(Color color1, Color color2)
+        {
+            return (color1.ToArgb() == color2.ToArgb());
         }
     }
 }

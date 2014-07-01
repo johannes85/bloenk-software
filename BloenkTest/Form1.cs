@@ -174,7 +174,7 @@ namespace BloenkTest
             {
                 animation.Stop();
             }
-            animation = new RandomCircleAnimation(device, (int)numericLedCount.Value);
+            animation = new RandomCircleAnimation(device, (int)numericLedCount.Value, true);
             animation.Run();
         }
 
@@ -191,6 +191,10 @@ namespace BloenkTest
 
         private void pnlPicker_MouseDown(object sender, MouseEventArgs e)
         {
+            if (animation != null && animation.IsRunning())
+            {
+                animation.Stop();
+            }
             isSelecting = true;
             pickColor(e.X, e.Y); 
         }

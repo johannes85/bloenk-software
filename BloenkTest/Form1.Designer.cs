@@ -36,6 +36,7 @@
             this.button5 = new System.Windows.Forms.Button();
             this.txtLog = new System.Windows.Forms.TextBox();
             this.pnlMain = new System.Windows.Forms.Panel();
+            this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -45,7 +46,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.numericLedCount = new System.Windows.Forms.NumericUpDown();
             this.pnlPicker = new System.Windows.Forms.Panel();
-            this.button8 = new System.Windows.Forms.Button();
             this.pnlMain.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericLed)).BeginInit();
@@ -131,6 +131,16 @@
             this.pnlMain.Name = "pnlMain";
             this.pnlMain.Size = new System.Drawing.Size(495, 323);
             this.pnlMain.TabIndex = 15;
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(245, 258);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(249, 26);
+            this.button8.TabIndex = 24;
+            this.button8.Text = "start random fade animation";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button7
             // 
@@ -238,16 +248,6 @@
             this.pnlPicker.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlPicker_MouseDown);
             this.pnlPicker.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlPicker_MouseMove);
             this.pnlPicker.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pnlPicker_MouseUp);
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(245, 258);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(249, 26);
-            this.button8.TabIndex = 24;
-            this.button8.Text = "start random fade animation";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // Form1
             // 
