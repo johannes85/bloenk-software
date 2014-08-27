@@ -30,11 +30,11 @@ namespace BloenkJenkins
         {
             get
             {
-                List<Job> jobs = (List<Job>)this["Jobs"];
-                if (jobs == null) {
-                    jobs = new List<Job>();
+                if (this["Jobs"] == null)
+                {
+                    this["Jobs"] = new List<Job>();
                 }
-                return (jobs);
+                return ((List<Job>)this["Jobs"]);
             }
             set
             {

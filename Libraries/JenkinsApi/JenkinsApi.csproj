@@ -43,7 +43,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Jenkins.cs" />
-    <Compile Include="JenkinsColor.cs" />
     <Compile Include="JenkinsException.cs" />
     <Compile Include="Job.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
